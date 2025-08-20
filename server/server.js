@@ -15,10 +15,11 @@ const server = http.createServer(app);
 //Intiallize the socket.io server
 
 
-
 export const io = new Server(server, {
-    cors: { origin: "*" }
-
+    cors: { 
+        origin: true, // Accept all origins
+        credentials: true // Allow credentials if needed
+    }
 });
 
 //store user online
